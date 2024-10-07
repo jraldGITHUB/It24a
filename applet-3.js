@@ -10,9 +10,10 @@ class DataLogger{
         this.logButton.addEventListener('click', () => this.logData());
         this.clearButton.addEventListener('click', () => this.clearLogs());
     }
-    logData(){
+    logData(){       
         const time = new Date().toLocaleString();
         this.loggedData.push(time);
+        this.updateCardContainer();
     }
     clearLogs(){
         this.loggedData = []; 
@@ -22,9 +23,12 @@ class DataLogger{
 
         this.idContainer.innerHTML = '';
 
-        this.loggedData.forEach(data => {       
+        this.loggedData.forEach(data => {   
+                
             const card = document.createElement('div');
+
             card.className = 'card mb-2';
+
             card.innerHTML = `
                 <div class="card-body">
                     <h5 class="card-title">Logged Data</h5>
@@ -37,9 +41,11 @@ class DataLogger{
         this.displayLogCount();
         
     }
+
     countLogs(){
         return this.loggedData.length;
       }
+      
       displayLogCount() {
         const logCount = this.countLogs();
         this.logCountElement.innerHTML = `<p>Total Logs: ${logCount}</p>`; 
