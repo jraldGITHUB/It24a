@@ -16,3 +16,8 @@ class leafLetMap{
     }
     
     const Mymap = new leafLetMap('map', [8.359735, 124.869206], 18);
+
+    
+Mymap.addMarker(8.359735, 124.869206, 'CCS Faculty Office');
+Mymap.addMarker(8.359102, 124.868606, 'BA Building');
+Mymap.addMarker(8.360148, 124.868235, 'Sc Building');
