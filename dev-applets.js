@@ -13,6 +13,9 @@ let product = number * number2;
 let quotient = number / number2;
 let remainder = number % number2;
 
+// Logical Operators
+let isPositive = number > 0;
+let isEven = number % 2 === 0;
 
 // Prime number check function
 function isPrime(num) {
@@ -28,6 +31,7 @@ function isPalindrome(str) {
     let reversed = str.split('').reverse().join('');
     return str === reversed;
 }
+
 // Output data types, arithmetic results, and logical checks
 console.log('Data Types:');
 console.log('Number:', number);
