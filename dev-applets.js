@@ -28,6 +28,24 @@ function isPalindrome(str) {
     let reversed = str.split('').reverse().join('');
     return str === reversed;
 }
+// Output data types, arithmetic results, and logical checks
+console.log('Data Types:');
+console.log('Number:', number);
+console.log('Text:', text);
+console.log('Is Active:', isActive);
+console.log('Array:', array);
+console.log('Person Object:', person);
+
+console.log('\nArithmetic Operations:');
+console.log('Sum:', sum);
+console.log('Difference:', difference);
+console.log('Product:', product);
+console.log('Quotient:', quotient);
+console.log('Remainder:', remainder);
+
+console.log('\nLogical Operations:');
+console.log('Is Positive:', isPositive);
+console.log('Is Even:', isEven);
 
 // Conditional Statements
 
