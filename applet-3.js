@@ -14,4 +14,8 @@ class DataLogger{
 
 
     }
+    logData(){
+        const time = new Date().toLocaleDateString();
+        this.loggedData.push(time);
+    }
 }
