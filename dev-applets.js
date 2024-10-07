@@ -37,3 +37,19 @@ switch (number) {
     default:
         console.log('The number is neither 10 nor 20.');
 }
+
+// Loops
+
+// for loop
+console.log('\nFor Loop:');
+for (let i = 0; i < array.length; i++) {
+    console.log('Array element at index', i, ':', array[i]);
+}
+
+// while loop
+console.log('\nWhile Loop:');
+let index = 0;
+while (index < array.length) {
+    console.log('Array element at index', index, ':', array[index]);
+    index++;
+}
