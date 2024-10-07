@@ -10,3 +10,7 @@ class leafLetMap{
         }).addTo(this.map);
     }
     }
+    addMarker(lat, long, message){
+        const marker = L.marker([lat, long]).addTo(this.map)
+        .bindPopup(message);
+    }
