@@ -12,5 +12,17 @@
     "latitude": 8.360148, 
     "longitude" : 124.868235,
     "message" : "Tambayan"
+},
+{
+    "latitude": 8.360375,  
+    "longitude" : 124.867498,
+    "message" : "Sc Building"
+},
+
+
+{
+    "latitude": 8.359220,
+    "longitude" : 124.867647,
+    "message" : "Clinic"
 }
 ]

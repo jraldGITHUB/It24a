@@ -33,5 +33,7 @@ loadMarkersFromJson(url) {
 Mymap.addMarker(8.359735, 124.869206, 'CCS Faculty Office');
 Mymap.addMarker(8.359102, 124.868606, 'BA Building');
 Mymap.addMarker(8.360648, 124.868235, 'Tambayan');
+Mymap.addMarker(8.360375, 124.867498 , 'Sc Building');
+Mymap.addMarker(8.359220,124.867647, 'Clinic');
 
 Mymap.loadMarkersFromJson('map.json');
