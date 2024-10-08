@@ -7,7 +7,8 @@ class LeafletMap {
         this.attendanceCountSC = 0;
         this.attendanceCountBA = 0;
         this.attendanceCountLab = 0;
-        this.attendanceCountLab2 = 0;
+        this.attendanceCountTambayan = 0;
+        this.attendanceCountClinic=0
 
 
         this.markerCounts = {};
@@ -23,8 +24,8 @@ class LeafletMap {
         this.logCountElement = document.getElementById('logCountlab');
         this.logCount1Element = document.getElementById('logCountBA');
         this.logCount2Element = document.getElementById('logCountSc');
-        this.logCountLab2Element = document.getElementById('logCountClinic');
-        this.logCountLab3Element = document.getElementById('logCounttambayan');
+        this.logCount3Element = document.getElementById('logCountClinic');
+        this.logCount4Element = document.getElementById('logCounttambayan');
 
         this.idContainer = document.getElementById('logContainer');
 
@@ -64,5 +65,30 @@ loadMarkersFromJson(url) {
         });
     })
     .catch(error => console.error("Error Loading servers:", error));
+}
+clearLogs(){
+    this.attendanceCountSC = 0;
+    this.attendanceCountBA = 0;
+    this.attendanceCountLab = 0;
+    this.attendanceCountClinic = 0;
+    this.attendanceCountTambayan = 0;
+
+    this.loggedData = [];
+    this.markerCounts = {}; 
+    this.markers.forEach(marker => {
+        const message = marker.getPopup().getContent().split('<br>')[0]; 
+        this.markerCounts[message] = 0;
+        this.updateMarkerPopup(marker, message); 
+    });
+
+
+}
+
+displayLogCount() {      
+    this.logCountElement.innerHTML = `SC Building Attendance: ${this.attendanceCountSC}`;
+    this.logCount1Element.innerHTML = `BA Building Attendance: ${this.attendanceCountBA}`;
+    this.logCount2Element.innerHTML = `CCS Laboratory Attendance: ${this.attendanceCountLab}`;
+    this.logCount3Element.innerHTML = `Clinic Attendance: ${this.attendanceCountClinic}`;
+    this.logCount4Element.innerHTML = `Tambayan Attendance: ${this.attendanceCountTambayan}`;
 }
 }   
