@@ -49,4 +49,20 @@ addMarker(lat, long, message){
     this.updateMarkerPopup(marker, message);
     this.markers.push(marker);
 }
+
+updateMarkerPopup(marker, message) {
+    const count = this.markerCounts[message];
+    marker.bindPopup(`${message}<br>Attendance logs: ${count}`).openPopup();
+}
+
+loadMarkersFromJson(url) {
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(marker => {
+            this.addMarker(marker.latitude, marker.longitude, marker.message);
+        });
+    })
+    .catch(error => console.error("Error Loading servers:", error));
+}
 }   
