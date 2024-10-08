@@ -82,6 +82,7 @@ clearLogs(){
     });
 
 
+    this.updateLogDisplay();
 }
 
 displayLogCount() {      
@@ -91,4 +92,53 @@ displayLogCount() {
     this.logCount3Element.innerHTML = `Clinic Attendance: ${this.attendanceCountClinic}`;
     this.logCount4Element.innerHTML = `Tambayan Attendance: ${this.attendanceCountTambayan}`;
 }
-}   
+dataSc() {
+    this.addMarker(8.360238, 124.867470, 'SC building');
+    this.attendanceCountSC++; 
+    this.updateLogDisplay();
+}
+
+dataBa() {
+    this.addMarker(8.359134, 124.868537, 'BA building');
+    this.attendanceCountBA++;
+    this.updateLogDisplay();
+}
+
+dataLab() {
+    this.addMarker(8.359639, 124.869179, 'CCS Laboratory 1');
+    this.attendanceCountLab++;
+    this.updateLogDisplay();
+}
+
+dataclinic() { 
+    this.addMarker(8.359300, 124.869500, 'Clinic');
+    this.attendanceCountClinic++;
+    this.updateLogDisplay();
+}
+datatambayan() { 
+    this.addMarker(8.359300, 124.869500, 'Tambayan');
+    this.attendanceCountTambayan++;
+    this.updateLogDisplay();
+}
+
+updateLogDisplay() {
+    this.idContainer.innerHTML = ''; 
+    this.loggedData.forEach(data => {
+        const logItem = document.createElement('div');
+        logItem.className = 'log-item';
+        this.idContainer.appendChild(logItem);
+    });
+    this.displayLogCount();
+}
+
+
+}
+const Mymap = new LeafletMap('map', [8.359735, 124.869206], 18);
+
+Mymap.loadMarkersFromJson('applet-2.json');
+
+    document.addEventListener('DOMContentLoaded', () => {
+        Mymap.displayLogCount();
+        Mymap.loadMarkersFromJson('applet-2.json');
+    });
+  
