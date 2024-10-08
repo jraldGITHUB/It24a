@@ -111,12 +111,13 @@ dataLab() {
 }
 
 dataclinic() { 
-    this.addMarker(8.359300, 124.869500, 'Clinic');
+    this.addMarker( 8.359220,124.867647, 'Clinic');
     this.attendanceCountClinic++;
     this.updateLogDisplay();
 }
+
 datatambayan() { 
-    this.addMarker(8.359300, 124.869500, 'Tambayan');
+    this.addMarker( 8.360148,  124.868235,'Tambayan');
     this.attendanceCountTambayan++;
     this.updateLogDisplay();
 }
