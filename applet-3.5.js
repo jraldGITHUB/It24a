@@ -20,6 +20,8 @@ class LeafletMap {
         this.btn1 = document.getElementById('btn1');
         this.btn2 = document.getElementById('btn2');
         this.btn3 = document.getElementById('btn3'); 
+        this.btn4 = document.getElementById('btn4'); 
+
         this.btnclear = document.getElementById('btnclear');
         this.logCountElement = document.getElementById('logCountlab');
         this.logCount1Element = document.getElementById('logCountBA');
@@ -30,10 +32,10 @@ class LeafletMap {
         this.idContainer = document.getElementById('logContainer');
 
         this.btn.addEventListener('click', () => this.dataSc());
-        this.btn1.addEventListener('click', () => this.dataLab());
-        this.btn2.addEventListener('click', () => this.dataBA());
-        this.btn3.addEventListener('click', () => this.dataClinic());
-        this.btn4.addEventListener('click', () => this.datatambayan());
+        this.btn1.addEventListener('click', () => this.dataBa());
+        this.btn2.addEventListener('click', () => this.dataLab());
+        this.btn3.addEventListener('click', () => this.dataclinic());
+        this.btn4.addEventListener('click', () => this.dataTambayan());
         this.btnclear.addEventListener('click', () => this.clearLogs());
     }
 
@@ -98,15 +100,15 @@ dataSc() {
     this.updateLogDisplay();
 }
 
-dataBa() {
-    this.addMarker(8.359134, 124.868537, 'BA building');
-    this.attendanceCountBA++;
+dataLab() {
+    this.addMarker(8.359639, 124.869179, 'Laborotory');
+    this.attendanceCountLab++;
     this.updateLogDisplay();
 }
 
-dataLab() {
-    this.addMarker(8.359639, 124.869179, 'CCS Laboratory 1');
-    this.attendanceCountLab++;
+dataBa() {
+    this.addMarker(8.359134, 124.868537, 'Ba Building');
+   this.attendanceCountBA++; 
     this.updateLogDisplay();
 }
 
@@ -116,7 +118,7 @@ dataclinic() {
     this.updateLogDisplay();
 }
 
-datatambayan() { 
+dataTambayan() { 
     this.addMarker( 8.360148,  124.868235,'Tambayan');
     this.attendanceCountTambayan++;
     this.updateLogDisplay();
