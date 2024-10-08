@@ -95,19 +95,19 @@ displayLogCount() {
     this.logCount4Element.innerHTML = `Tambayan Attendance: ${this.attendanceCountTambayan}`;
 }
 dataSc() {
-    this.addMarker(8.360238, 124.867470, 'SC building');
+    this.addMarker( 8.360375, 124.867498, 'SC building');
     this.attendanceCountSC++; 
     this.updateLogDisplay();
 }
 
 dataLab() {
-    this.addMarker(8.359639, 124.869179, 'Laborotory');
+    this.addMarker(8.359735, 124.869206, 'Laborotory');
     this.attendanceCountLab++;
     this.updateLogDisplay();
 }
 
 dataBa() {
-    this.addMarker(8.359134, 124.868537, 'Ba Building');
+    this.addMarker(8.359102, 124.868606, 'Ba Building');
    this.attendanceCountBA++; 
     this.updateLogDisplay();
 }
