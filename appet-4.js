@@ -8,7 +8,7 @@ class StudentList {
     async init() {
         await this.fetchData();
         this.renderStudentList(this.students); 
-        this.bindSearchEvent();
+      
     }
     async fetchData() {
         try {
@@ -28,5 +28,16 @@ class StudentList {
             </button><br>`
         ).join('');
     }
+    bindSearchEvent() {
+        const studentSearchBar = document.getElementById('studentSearchBar');
+        const studentSearchListContainer = document.getElementById('studentSearchList');
+
+        studentSearchBar.addEventListener('input', () => {
+            this.filterStudents(studentSearchBar.value, studentSearchListContainer);
+        });
+
+        this.renderStudentList(this.students, studentSearchListContainer);
+    }
+
 }
 
