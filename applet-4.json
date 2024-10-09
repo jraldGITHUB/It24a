@@ -1,0 +1,38 @@
+[
+    {
+      "student_id": 1,
+      "student_name": "baco",
+      "student_program": "BS - Information Technology",
+      "student_enrolled_date": "2024-01-15"
+    },
+    {
+      "student_id": 2,
+      "student_name": "Raldy",
+      "student_program": "BS-Computer Engineering",
+      "student_enrolled_date": "2024-02-20"
+    },
+    {
+      "student_id": 3,
+      "student_name": "Bacs",
+      "student_program": "BS - Nursing",
+      "student_enrolled_date": "2024-03-10"
+
+    },
+    {
+        "student_id": 4,
+        "student_name": "Bacss",
+        "student_program": "BS - Engenering",
+        "student_enrolled_date": "2024-03-10"
+
+    },
+    {
+        "student_id": 4,
+        "student_name": "John",
+        "student_program": "Hotdog",
+        "student_enrolled_date": "2024-03-10"
+      }
+    ]
+    
+    
+  
+  
