@@ -26,3 +26,7 @@ class WeatherApp{
         this.windSpeed.textContent = `Wind Speed: ${data.wind.speed} m/s`;
     }
 }
+
+class WeatherService extends WeatherApp {
+    
+}
