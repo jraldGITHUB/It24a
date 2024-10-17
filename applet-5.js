@@ -1,7 +1,7 @@
 class WeatherApp{
-    constructor(apiKey){
+    constructor(){
 
-        this.apiKey = apiKey;
+    
         this.cityInput = document.getElementById('cityInput');
         this.getWeatherBtn = document.getElementById('getWeatherBtn');
 
@@ -13,6 +13,7 @@ class WeatherApp{
         this.description = document.getElementById('description');
         this.humidity = document.getElementById('humidity');
         this.windSpeed = document.getElementById('windSpeed');
+        this.APIKeyInput = document.getElementById('apiInput');
 
         this.getWeatherBtn.addEventListener('click', () => this.fetchWeather());
         this.getLocationBtn.addEventListener('click', () => this.fetchWeatherByLocation());
@@ -24,6 +25,8 @@ class WeatherApp{
         this.description.textContent = `Weather: ${data.weather[0].description}`;
         this.humidity.textContent = `Humidity: ${data.main.humidity}%`;
         this.windSpeed.textContent = `Wind Speed: ${data.wind.speed} m/s`;
+        
+        this.weatherCard.style.display = 'block';
     }
 }
 
@@ -99,5 +102,4 @@ class WeatherService extends WeatherApp {
 }
 
 
-const apiKey = ''; 
-const weatherApp = new WeatherService(apiKey);
+const weatherApp = new WeatherService();
