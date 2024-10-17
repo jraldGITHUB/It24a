@@ -9,7 +9,18 @@
     <title> Dev-weather</title>
     <style>
         body{
-            background-color: antiquewhite
+            background-color: black
+            
+        }
+        #cityInput{
+            width: 30rem;
+            height: 3.5rem;
+            border-radius: 20px;
+
+        }
+        h2{
+            color: aliceblue;
+            margin-top: 5rem;
         }
 
     </style>
@@ -17,6 +28,10 @@
 <body>
     <div class="container">
         <h2>Weather</h2>
+
+        <input type="text" id="cityInput" placeholder="Enter city name" />
+        <button id="getWeatherBtn" class="btn btn-outline-info" style="margin-top: -0.45rem;">Get Weather</button>
+        <button id="getLocationBtn" class="btn btn-outline-warning"style="margin-top: -0.45rem;">Use My Location</button>
     </div>
 </body>
 </html>
