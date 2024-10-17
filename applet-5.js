@@ -33,6 +33,12 @@ class WeatherService extends WeatherApp {
         this.apiKey = '';
     }
     async fetchWeather() {
+        this.apiKey = this.APIKeyInput.value.trim(); 
+
+        if (!this.apiKey) {
+            alert('Please enter your API key.');
+            return;
+        }
         const city = this.cityInput.value;
         if (city) {
             const data = await this.getWeatherData(city);
