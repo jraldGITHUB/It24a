@@ -59,6 +59,11 @@ class todoList{
         this.editingIndex = Array.from(this.todoList.children).indexOf(taskItem);
         this.addButton.textContent = 'Update';
     }
+
+    resetEditing() {
+        this.editingIndex = -1;
+        this.addButton.textContent = 'Add';
+    }
     }
 
     
