@@ -77,4 +77,4 @@ class TimestampedTodoList extends todoList {
     }
     }
 
-    
+    document.addEventListener('DOMContentLoaded', () => new todoList());
