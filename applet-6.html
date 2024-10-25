@@ -10,24 +10,23 @@
 </head>
 <style>
     body{
-        background-color: black;
+        background-color: darksalmon;
     }
         .text-center {
             color: rgb(255, 255, 255);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-family: 'Courier New', Courier, monospace;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
         }
         .form-control{
             height: 3rem;
             border-color: black;
-            margin-bottom: 1rem;
+            margin-bottom: 6rem;
 
         }
         #addButton{
             margin-top: 0.3rem;
             border-color: rgb(0, 0, 0);
-        }
+        } 
 
 </style>
 <body>
@@ -74,16 +73,18 @@
         </nav>
       </header>
    
-      <div class="container-fluid" style="max-width: 40%;">
+      <div class="container-fluid" style="max-width: 40%; max-height: 10%;">
         <h2 class="text-center">To-Do List</h2>
         <div class="input-group mb-4">
             <textarea class="form-control" id="todoInput" placeholder="Add a new task"  rows="3"></textarea>
                <div class="input-group-append" style="margin-left: .5rem;">
                   <button class="btn btn-primary" id="addButton">Add</button>
                </div>
-                  <ul id="todoList" class="list-group"></ul>
+                  
         </div>
     </div>
+
+    <ul id="todoList" class="list-group" style="width: 20%; margin: auto;" ></ul>
 </body>
 <script src="applet-6.js"></script>
 </html>
